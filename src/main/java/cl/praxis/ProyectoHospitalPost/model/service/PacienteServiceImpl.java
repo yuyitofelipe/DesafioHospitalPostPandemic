@@ -5,13 +5,26 @@ import cl.praxis.ProyectoHospitalPost.model.dto.Paciente;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class PacienteServiceImpl implements PacienteService {
+    // private JdbcTemplate template;
+    /*
+    public PacienteServiceImpl(JdbcTemplate template) {
+        this.template = template;
+        }
 
+    @Override
+    public List<Tuit> findAll() {
+        return template.query("select id, mensaje from tuit",
+                new BeanPropertyRowMapper<>(Tuit.class));
+    }
+     */
     private List<Paciente> pacienteList;
     private static final Logger logger = LoggerFactory.getLogger(ProyectoHospitalPostApplication.class);
 
